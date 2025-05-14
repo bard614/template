@@ -2,7 +2,6 @@ package com.example.template.template;
 
 import com.example.template.template.model.User;
 import com.example.template.template.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
