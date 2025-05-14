@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者管理</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">使用者管理</h1>
+
+        <h2 class="mt-4">新增使用者</h2>
+        <form id="addUserForm" class="mb-4">
+            <div class="mb-3">
+                <label for="username" class="form-label">使用者名稱:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">密碼:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="role" class="form-label">角色:</label>
+                <select class="form-select" id="role" name="role" required>
+                    <option value="USER">USER</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">新增使用者</button>
+        </form>
+
+        <h2 class="mt-4">使用者列表</h2>
+        <table id="userTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>使用者名稱</th>
+                    <th>角色</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User data will be loaded here -->
+            </tbody>
+        </table>
+
+        <!-- 登出按鈕 -->
+        <form action="/logout" method="post" class="mt-4">
+            <button type="submit" class="btn btn-danger">登出</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="users.js"></script>
+</body>
+</html>

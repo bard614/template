@@ -6,6 +6,8 @@ spring:
     username: temp
     password: temp
   jpa:
+    hibernate:
+      ddl-auto: update # 或者 create, create-drop, none
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
